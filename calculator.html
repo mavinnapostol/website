@@ -1,1 +1,101 @@
-aaaaaaaaaaaaaa
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Math Master Hub | Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Math Master Hub</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="calculator.html">Calculator</a></li>
+        <li><a href="diameter.html">Diameter</a></li>
+        <li><a href="area.html">Area</a></li>
+        <li><a href="volume.html">Volume</a></li>
+        <li><a href="perimeter.html">Perimeter</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section">
+    <h1 class="page-title">Calculator</h1>
+    <p class="page-subtitle">Use the tools below for basic operations and expressions with parentheses.</p>
+
+    <div class="grid two">
+      <div class="card calc-card">
+        <h3>Addition</h3>
+        <input type="number" id="add1" placeholder="First number">
+        <input type="number" id="add2" placeholder="Second number">
+        <button class="btn primary full" onclick="calculateBasic('add')">Solve</button>
+        <div class="result" id="addResult">Result: —</div>
+      </div>
+
+      <div class="card calc-card">
+        <h3>Subtraction</h3>
+        <input type="number" id="sub1" placeholder="First number">
+        <input type="number" id="sub2" placeholder="Second number">
+        <button class="btn primary full" onclick="calculateBasic('sub')">Solve</button>
+        <div class="result" id="subResult">Result: —</div>
+      </div>
+
+      <div class="card calc-card">
+        <h3>Multiplication</h3>
+        <input type="number" id="mul1" placeholder="First number">
+        <input type="number" id="mul2" placeholder="Second number">
+        <button class="btn primary full" onclick="calculateBasic('mul')">Solve</button>
+        <div class="result" id="mulResult">Result: —</div>
+      </div>
+
+      <div class="card calc-card">
+        <h3>Division</h3>
+        <input type="number" id="div1" placeholder="Dividend">
+        <input type="number" id="div2" placeholder="Divisor">
+        <button class="btn primary full" onclick="calculateBasic('div')">Solve</button>
+        <div class="result" id="divResult">Result: —</div>
+      </div>
+
+      <div class="card calc-card">
+        <h3>Percentage</h3>
+        <input type="number" id="pctBase" placeholder="Base value">
+        <input type="number" id="pctRate" placeholder="Percentage rate">
+        <button class="btn primary full" onclick="calculatePercentage()">Solve</button>
+        <div class="result" id="pctResult">Result: —</div>
+      </div>
+
+      <div class="card calc-card">
+        <h3>Square Root</h3>
+        <input type="number" id="sqrtValue" placeholder="Enter a number">
+        <button class="btn primary full" onclick="calculateSquareRoot()">Solve</button>
+        <div class="result" id="sqrtResult">Result: —</div>
+      </div>
+
+      <div class="card calc-card">
+        <h3>Exponent</h3>
+        <input type="number" id="expBase" placeholder="Base">
+        <input type="number" id="expPower" placeholder="Exponent">
+        <button class="btn primary full" onclick="calculateExponent()">Solve</button>
+        <div class="result" id="expResult">Result: —</div>
+      </div>
+
+      <div class="card calc-card">
+        <h3>Parentheses / Expression</h3>
+        <input type="text" id="exprInput" placeholder="Example: (5+3)*2">
+        <button class="btn primary full" onclick="calculateExpression()">Solve</button>
+        <div class="result" id="exprResult">Result: —</div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Math Master Hub. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
