@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Math Master Hub | Volume</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Math Master Hub</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="diameter.html">Diameter</a></li>
+        <li><a href="area.html">Area</a></li>
+        <li><a class="active" href="volume.html">Volume</a></li>
+        <li><a href="perimeter.html">Perimeter</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section">
+    <h1 class="page-title">Volume Calculators</h1>
+    <p class="page-subtitle">Solve common 3D shape volumes quickly.</p>
+
+    <div class="grid two">
+      <div class="card calc-card">
+        <h3>Cube</h3>
+        <p class="formula">V = s³</p>
+        <input type="number" id="cubeS" placeholder="Side">
+        <button class="btn primary full" onclick="calculateVolume('cube')">Solve</button>
+        <div class="result" id="volCube">Volume: —</div>
+      </div>
+
+      <div class="card calc-card">
+        <h3>Cylinder</h3>
+        <p class="formula">V = πr²h</p>
+        <input type="number" id="cylR" placeholder="Radius">
+        <input type="number" id="cylH" placeholder="Height">
+        <button class="btn primary full" onclick="calculateVolume('cylinder')">Solve</button>
+        <div class="result" id="volCylinder">Volume: —</div>
+      </div>
+
+      <div class="card calc-card">
+        <h3>Cone</h3>
+        <p class="formula">V = ⅓πr²h</p>
+        <input type="number" id="coneR" placeholder="Radius">
+        <input type="number" id="coneH" placeholder="Height">
+        <button class="btn primary full" onclick="calculateVolume('cone')">Solve</button>
+        <div class="result" id="volCone">Volume: —</div>
+      </div>
+
+      <div class="card calc-card">
+        <h3>Sphere</h3>
+        <p class="formula">V = ⁴⁄₃πr³</p>
+        <input type="number" id="sphereR" placeholder="Radius">
+        <button class="btn primary full" onclick="calculateVolume('sphere')">Solve</button>
+        <div class="result" id="volSphere">Volume: —</div>
+      </div>
+
+      <div class="card calc-card">
+        <h3>Rectangular Prism</h3>
+        <p class="formula">V = l × w × h</p>
+        <input type="number" id="rpL" placeholder="Length">
+        <input type="number" id="rpW" placeholder="Width">
+        <input type="number" id="rpH" placeholder="Height">
+        <button class="btn primary full" onclick="calculateVolume('rectangularPrism')">Solve</button>
+        <div class="result" id="volRectangularPrism">Volume: —</div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Math Master Hub. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
