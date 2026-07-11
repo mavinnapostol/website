@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Math Master Hub | Diameter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Math Master Hub</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a class="active" href="diameter.html">Diameter</a></li>
+        <li><a href="area.html">Area</a></li>
+        <li><a href="volume.html">Volume</a></li>
+        <li><a href="perimeter.html">Perimeter</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section">
+    <h1 class="page-title">Diameter</h1>
+    <p class="page-subtitle">Circle formulas used for finding diameter.</p>
+
+    <div class="grid three">
+      <div class="card calc-card">
+        <h3>From Radius</h3>
+        <p class="formula">Formula: d = 2r</p>
+        <input type="number" id="diaRadius" placeholder="Enter radius">
+        <button class="btn primary full" onclick="calculateDiameter('radius')">Solve</button>
+        <div class="result" id="diaRadiusResult">Diameter: —</div>
+      </div>
+
+      <div class="card calc-card">
+        <h3>From Circumference</h3>
+        <p class="formula">Formula: d = C ÷ π</p>
+        <input type="number" id="diaCircumference" placeholder="Enter circumference">
+        <button class="btn primary full" onclick="calculateDiameter('circumference')">Solve</button>
+        <div class="result" id="diaCircumferenceResult">Diameter: —</div>
+      </div>
+
+      <div class="card calc-card">
+        <h3>From Area</h3>
+        <p class="formula">Formula: d = 2√(A ÷ π)</p>
+        <input type="number" id="diaArea" placeholder="Enter area">
+        <button class="btn primary full" onclick="calculateDiameter('area')">Solve</button>
+        <div class="result" id="diaAreaResult">Diameter: —</div>
+      </div>
+    </div>
+
+    <div class="card info-card">
+      <h3>Notes</h3>
+      <p>
+        Use these formulas depending on the information given. The diameter is the full distance
+        across a circle passing through the center.
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Math Master Hub. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
