@@ -1,1 +1,92 @@
-area
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Math Master Hub | Area</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Math Master Hub</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="diameter.html">Diameter</a></li>
+        <li><a class="active" href="area.html">Area</a></li>
+        <li><a href="volume.html">Volume</a></li>
+        <li><a href="perimeter.html">Perimeter</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section">
+    <h1 class="page-title">Area Calculators</h1>
+    <p class="page-subtitle">Each calculator includes its formula, inputs, solve button, and output.</p>
+
+    <div class="grid two">
+      <div class="card calc-card">
+        <h3>Rectangle</h3>
+        <p class="formula">A = l × w</p>
+        <input type="number" id="rectL" placeholder="Length">
+        <input type="number" id="rectW" placeholder="Width">
+        <button class="btn primary full" onclick="calculateArea('rectangle')">Solve</button>
+        <div class="result" id="areaRectangle">Area: —</div>
+      </div>
+
+      <div class="card calc-card">
+        <h3>Square</h3>
+        <p class="formula">A = s²</p>
+        <input type="number" id="squareS" placeholder="Side">
+        <button class="btn primary full" onclick="calculateArea('square')">Solve</button>
+        <div class="result" id="areaSquare">Area: —</div>
+      </div>
+
+      <div class="card calc-card">
+        <h3>Triangle</h3>
+        <p class="formula">A = ½bh</p>
+        <input type="number" id="triB" placeholder="Base">
+        <input type="number" id="triH" placeholder="Height">
+        <button class="btn primary full" onclick="calculateArea('triangle')">Solve</button>
+        <div class="result" id="areaTriangle">Area: —</div>
+      </div>
+
+      <div class="card calc-card">
+        <h3>Circle</h3>
+        <p class="formula">A = πr²</p>
+        <input type="number" id="circleR" placeholder="Radius">
+        <button class="btn primary full" onclick="calculateArea('circle')">Solve</button>
+        <div class="result" id="areaCircle">Area: —</div>
+      </div>
+
+      <div class="card calc-card">
+        <h3>Parallelogram</h3>
+        <p class="formula">A = b × h</p>
+        <input type="number" id="paraB" placeholder="Base">
+        <input type="number" id="paraH" placeholder="Height">
+        <button class="btn primary full" onclick="calculateArea('parallelogram')">Solve</button>
+        <div class="result" id="areaParallelogram">Area: —</div>
+      </div>
+
+      <div class="card calc-card">
+        <h3>Trapezoid</h3>
+        <p class="formula">A = ½(a + b)h</p>
+        <input type="number" id="trapA" placeholder="Base 1">
+        <input type="number" id="trapB" placeholder="Base 2">
+        <input type="number" id="trapH" placeholder="Height">
+        <button class="btn primary full" onclick="calculateArea('trapezoid')">Solve</button>
+        <div class="result" id="areaTrapezoid">Area: —</div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Math Master Hub. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
