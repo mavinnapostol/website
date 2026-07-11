@@ -1,1 +1,83 @@
-teeeeeeeeeeeee
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Math Master Hub | Perimeter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Math Master Hub</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="diameter.html">Diameter</a></li>
+        <li><a href="area.html">Area</a></li>
+        <li><a href="volume.html">Volume</a></li>
+        <li><a class="active" href="perimeter.html">Perimeter</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section">
+    <h1 class="page-title">Perimeter Calculators</h1>
+    <p class="page-subtitle">Circumference is included as the perimeter of a circle.</p>
+
+    <div class="grid two">
+      <div class="card calc-card">
+        <h3>Rectangle</h3>
+        <p class="formula">P = 2(l + w)</p>
+        <input type="number" id="perRectL" placeholder="Length">
+        <input type="number" id="perRectW" placeholder="Width">
+        <button class="btn primary full" onclick="calculatePerimeter('rectangle')">Solve</button>
+        <div class="result" id="perRectangle">Perimeter: —</div>
+      </div>
+
+      <div class="card calc-card">
+        <h3>Square</h3>
+        <p class="formula">P = 4s</p>
+        <input type="number" id="perSquareS" placeholder="Side">
+        <button class="btn primary full" onclick="calculatePerimeter('square')">Solve</button>
+        <div class="result" id="perSquare">Perimeter: —</div>
+      </div>
+
+      <div class="card calc-card">
+        <h3>Triangle</h3>
+        <p class="formula">P = a + b + c</p>
+        <input type="number" id="perTriA" placeholder="Side A">
+        <input type="number" id="perTriB" placeholder="Side B">
+        <input type="number" id="perTriC" placeholder="Side C">
+        <button class="btn primary full" onclick="calculatePerimeter('triangle')">Solve</button>
+        <div class="result" id="perTriangle">Perimeter: —</div>
+      </div>
+
+      <div class="card calc-card">
+        <h3>Circle (Circumference)</h3>
+        <p class="formula">C = 2πr</p>
+        <input type="number" id="perCircleR" placeholder="Radius">
+        <button class="btn primary full" onclick="calculatePerimeter('circle')">Solve</button>
+        <div class="result" id="perCircle">Perimeter: —</div>
+      </div>
+
+      <div class="card calc-card">
+        <h3>Parallelogram</h3>
+        <p class="formula">P = 2(a + b)</p>
+        <input type="number" id="perParaA" placeholder="Side A">
+        <input type="number" id="perParaB" placeholder="Side B">
+        <button class="btn primary full" onclick="calculatePerimeter('parallelogram')">Solve</button>
+        <div class="result" id="perParallelogram">Perimeter: —</div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Math Master Hub. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
